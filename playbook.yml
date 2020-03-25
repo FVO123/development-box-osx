@@ -11,28 +11,6 @@
 
   roles:
 
-    - system
     - source-control
-    - vim
-    - java
-    - gradle
-    - dotnet
-    - node
-    - clojure
-    - kotlin
-    - ruby
     - office
-    - security
-    - internet
     - configuration-management
-    - media
-
-  post_tasks:
-
-    - name: Create remote user
-      user: name=remote generate_ssh_key=yes ssh_key_bits=2048 ssh_key_file=.ssh/id_rsa shell=/bin/bash
-      become: yes
-
-    - name: Create remote user Documents directory
-      file: path=/Users/remote/Documents state=directory owner=remote force=yes
-      become: yes

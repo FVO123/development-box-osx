@@ -1,2 +1,0 @@
-- name: Install Gradle
-  homebrew: name=gradle
